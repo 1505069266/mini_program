@@ -1,5 +1,12 @@
 {
   "pages": [
-    "pages/welcome/welcome"
-  ]
+    "pages/welcome/welcome",
+    "pages/posts/posts"
+  ],
+  "sitemapLocation": "sitemap.json",
+  "window": {
+    "navigationBarBackgroundColor": "#feecdd",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "black"
+  }
 }

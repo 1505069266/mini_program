@@ -3,9 +3,15 @@
 
 
 <view class="container">
+<image src="/images/2.png" style="width:750rpx;"></image>
   <image class="user-avatar"  src="/images/1.png"></image>
   <text class="user-name">hello world!</text>
-  <view class="btn">
-    <text>开启小程序之旅!</text>
+  <view class="btn" bind:tap="onTap">
+    <text catch:tap="onSubTap">开启小程序之旅!</text>
   </view>
+  <button>按钮是我</button>
+  <checkbox>checkbox是我</checkbox>
+  <text>姓名: </text>  <input value="ee"></input>
+  <map></map>
+   <canvas type="2d" id="myCanvas"></canvas>
 </view>

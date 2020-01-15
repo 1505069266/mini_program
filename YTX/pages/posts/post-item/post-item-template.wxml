@@ -1,0 +1,9 @@
+<template name="postItem">
+    <view>{{index}}</view>
+    <view>{{item.title}}</view>
+    <text>作者: {{item.author}}</text>
+    <view>
+      <text>{{item.content}}</text>
+      <text>222</text>
+    </view>
+</template>
