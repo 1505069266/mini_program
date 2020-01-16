@@ -8,29 +8,31 @@ Page({
    * 页面的初始数据
    */
   data: {
-    name:"朱晓乐",
-    errno: 'we'
+    name:"默认的name",
+    errno: '默认的errno'
+  },
+  detailPage(event){
+    let postId = event.currentTarget.dataset.postid
+    console.log("postId:",postId)
+    wx.navigateTo({
+      url: 'post-detail/post-detail?id=' + postId,
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log("onLoad")
-    this.req('http://localhost:3000/api/blog/list')
+    this.req('http://47.96.235.73:3000/api/blog/list')
     .then(res=>{
       this.setData({ res: res.data.data})
-      console.log(this.data)
     })
-
-    console.log(add(100, 88))
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log("onReady")
   },
 
   /**

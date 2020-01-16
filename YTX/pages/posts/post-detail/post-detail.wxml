@@ -1,0 +1,13 @@
+<!--pages/posts/post-detail/post-detail.wxml-->
+<text>博客详情页面</text>
+<view>
+  <view>
+    <text>{{postContent.title}}</text>
+  </view>
+  <view>
+    <text>作者:{{postContent.author}}</text>
+  </view>
+  <view>
+    <text>{{postContent.content}}</text>
+  </view>
+</view>

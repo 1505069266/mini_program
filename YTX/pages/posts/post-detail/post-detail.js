@@ -1,4 +1,4 @@
-// pageA/pages/posts/posts.js
+// pages/posts/post-detail/post-detail.js
 Page({
 
   /**
@@ -12,7 +12,27 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.axios('http://47.96.235.73:3000/api/blog/detail?id=', options.id).then(res=>{
+      this.setData({postContent: res.data.data})
+    })
+    wx.setStorageSync('name', '风暴英雄')
+  },
 
+  /**
+   * 封装微信请求
+   */
+  axios(url,id){
+    return new Promise((resolve,reject)=>{
+      wx.request({
+        url: url + id,
+        success: function(res){
+          resolve(res)
+        },
+        fail(err){
+          reject(err)
+        }
+      })
+    })
   },
 
   /**

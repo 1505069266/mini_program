@@ -7,9 +7,11 @@
         <swiper-item><image src="/images/2.png"></image></swiper-item>
         <swiper-item><image src="/images/3.jpg"></image></swiper-item>
   </swiper>
-  <view  wx:for="{{res}}" wx:for-item="item" wx:for-index="index" wx:key="item">
-    <template is="postItem" data="{{item}}"></template>
-  </view>
+  <block  wx:for="{{res}}" wx:for-item="item" wx:for-index="index" wx:key="item">
+    <view catchtap="detailPage" data-postId="{{item.id}}" class="article">
+      <template is="postItem" data="{{item}}"></template>
+    </view>
+  </block>
   <!-- <template></template> -->
 
 </view>

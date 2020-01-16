@@ -1,6 +1,8 @@
 /* pages/posts/posts.wxss */
 
-
+page{
+  background: #ececec;
+}
 
 swiper{
   width: 750rpx;
@@ -21,4 +23,14 @@ swiper image{
   -webkit-box-orient: vertical;
   align-content: center;
   
+}
+
+.article{
+  margin: 0 auto;
+  margin-top:20rpx;
+  background: #fff;
+  width: 85%;
+  border-radius: 30rpx;
+  padding: 30rpx;
+  box-shadow: 0 0 10rpx 0rpx rgb(161, 211, 161);
 }
